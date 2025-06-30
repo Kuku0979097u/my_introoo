@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" webcrx=""><head>
+  <!--[ Favicon ]-->
+  <link href="images/favicon.jpg" rel="apple-touch-icon" sizes="120x120">
+  <link href="images/favicon.jpg" rel="apple-touch-icon" sizes="152x152">
+  <link href="images/favicon.jpg" rel="icon" type="image/x-icon">
+  <link href="images/favicon.jpg" rel="shortcut icon" type="image/x-icon">
+  <link href="images/favicon.jpg">
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avika | Self Introduction</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --light-bg: #f5f5f5;
+      --light-text: #111;
+      --dark-bg: #0d0d0d;
+      --dark-text: #fff;
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+.fullpage-hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background: radial-gradient(ellipse at center, #111 0%, #000 100%);
+}
+
+.dark-mode .fullpage-hero {
+  background: radial-gradient(ellipse at center, #f5f5f5 0%, #eaeaea 100%);
+}
+
+.typing {
+  background: radial-gradient(circle at 100%,
+      #E8C6FF,
+      #D08DFF 50%,
+      #E8C6FF 75%, 
+      #D08DFF 75%);
+  font-weight: 600;
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #E0B4FF;
+  width: 0;
+  animation: typing 3s steps(20) forwards, blink 0.8s infinite, animatedTextGradient 1.5s linear infinite;
+}
+
+@keyframes typing {
+  to {
+    width: 9.4ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+section {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  background: radial-gradient(circle at 100%,
+      #E0B4FF,
+      #D08DFF 50%,
+      #E0B4FF 75%,
+      #D08DFF 75%);
+  font-weight: 600;
+  background-size: 200% auto;
+  background-clip: text;
+  
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(270deg, #D08DFF, #E8C6FF, #54FFE9);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 4s ease infinite, animatedTextGradient 5s linear infinite;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card {
+  position: relative;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #000000;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+ /* background: linear-gradient(90deg, #ff0080, #7928ca, #2afadf, #ff0080);*/
+  background-size: 400% 400%;
+  z-index: -1;
+  border-radius: 14px;
+  animation: borderAnimation 10s linear infinite;
+}
+
+@keyframes borderAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.dark-mode .card {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 10px rgba(150, 150, 150, 0.3);
+}
+
+.card p i {
+  margin-right: 10px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.card p i:hover {
+  transform: scale(1.2);
+}
+
+.fab.fa-whatsapp { color: #25D366; }
+.fab.fa-telegram { color: #00AAFF; }
+.fab.fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fas.fa-angles-right { color: ;   background: radial-gradient(circle at 100%,
+      #FFFFFF,
+      #7DFF63 50%,
+      #03FF00 75%,
+      #03FF00 75%);
+  font-weight: 600;
+  background-size: 200% auto;
+  background-clip: text;
+  gap: 1px;
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animatedTextGradient 1.5s linear infinite;
+}
+/*
+.fab.fa-python { color: #EFFF07; }
+.fab.fa-html5 { color: #FF4F23; }
+.fab.fa-css3-alt { color: #4269FF; }
+.fab.fa-js-square { color: #f0db4f; }
+.fas.fa-video { color: #FF0E05; }
+ .fas.fa-lightbulb { color: #facc15; }*/
+
+#darkToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  transition: background-color 0.4s, color 0.4s, transform 0.3s;
+}
+
+#darkToggle.active {
+  color: #D08DFF;
+}
+
+#darkToggle:hover {
+  transform: scale(1.1);
+}
+
+#darkToggle i {
+  transition: transform 0.5s;
+}
+
+#darkToggle.active i {
+  transform: rotate(360deg);
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  left: 326px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: #E8C6FF;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px #E8C6FF;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#backToTop.show {
+  transform: scale(1);
+  opacity: 1;
+}
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  font-size: 9px;
+  opacity: 0.8;
+}
+
+.footer p a {
+  background: radial-gradient(circle at 100%,
+      #FFFFFF,
+      #FF3A3A 50%,
+      #FF5252 75%,
+      #FF3A3A 75%);
+    font-weight: 600;
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animatedTextGradient 1.5s linear infinite;
+}
+@keyframes animatedTextGradient {
+  to {
+    background-position: -200% center;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #D08DFF;
+}
+  </style>
+<script src="blob:https://urstark.vercel.app/c5eb9073-0ecb-48b3-af4b-5fa50d841481"></script></head>
+<body>
+    <div class="fullpage-hero">
+    <img src="https://cdn5.cdn-telegram.org/file/X9se7ZQRps3An8rlfp_UM165DMbsdoGRbvmiGiSp66wzVV_Pepl9OsrEzmsZf4n6LNRwmwUq2-dvXzTy5zc4tUlbIKVgfodyUvodjU_e7ACPla7AXqwXqN6O3VZnR8JWNnKPQ5Q76vHieRt3FxlLR4G6RXGXP1myscCulij3k2YjtQ-QPp7S0UHzqfMjjffPeGwqerSQ0_TB7is33xno2icl5yyhZMUqzcTJgUyiYMaUkRh08Oic69UJleyDhLaCe6uDlLHV8jk2mQ553cTa3xJe9mk1IC2TcpHwdZUGQe6uLVkxIEI7owinGYfOiSbfLZYi-fYGJu19uuiXeId3_A.jpg" alt="Avi" style="width: 120px; border-radius: 50%; box-shadow: 0 0 10px crimson; margin-bottom: 20px;">
+    <div class="typing"> Avika here !</div>
+  </div>
+
+  <section class="reveal">
+    <div class="card">
+      <h2><i class="fas fa-user"></i> About Me</h2><br>
+      <p> I am a chatterbox,innocent,cute and sab mko bahut pyar karte lekin mai hi bhav nhi deti .</p>
+     
+      <br><hr style="width: 17em; margin: 0 0 0 0em;"><br>
+      
+      <p style="font-size: 13px;"><i class="fas fa-location-dot"></i>From : Chattishgardh </p><br>
+      <p style="font-size: 13px;"> <i class="fas fa-eject"></i>Age : 16</p><br>
+      <p style="font-size: 13px;"><i class="fas fa-user-tie"></i>Profession : Student </p><br>
+      <p style="font-size: 13px;"><i class="fa fa-graduation-cap"></i>Classe : 10th  </p>
+      
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="card">
+      <h2><i class="fas fa-terminal"></i> My destiny </h2><br>
+      <span></span>
+      <p><i class="fas fa-robot"></i><a href="https://eternalsai.vercel.app" target="_blank">AI - Voice calling AI  <i class="fas fa-link"></i></a><br><br><i class="fas fa-angles-right"></i>Live one to one voice calling AI assistant with Human like emotions and feelings.<br><br>
+      
+      </p><hr style="width: 18em; margin: 0 0 0 1em;"><br>
+        
+      
+         <i class="fas fa-clipboard-list"></i> <a href="https://eternalsai-quiz.vercel.app" target="_blank">ㅤPDF to Quiz Maker AI  <i class="fas fa-link"></i></a><br><br><i class="fas fa-angles-right"></i> Make Quizes effortlessly, just with an PDF file. <br><br>
+         
+      <hr style="width: 18em; margin: 0 0 0 1em;"><br>
+      
+         <i class="fas fa-globe"></i> <a href="https://t.me/+y2Z9macsWJtlMWFl" target="_blank">ㅤmy group  <i class="fas fa-link"></i></a><br><br>
+         <i class="fas fa-angles-right"></i>Idhar aa jao pls<br><br>
+    </div>
+  </section>
+  
+  <section class="reveal">
+    <div class="card">
+      <h2><i class="fas fa-layer-group"></i> Hobbies</h2><br>
+      <p><i class="fas fa-music"></i> Listening to music <br><br>
+         <i class="fas fa-lightbulb"></i> Learning something new every day <br><br>
+         <i class="fas fa-video"></i> chatting <br><br>
+         <i class="fas fa-code"></i> story teller</p>
+    </div>
+  </section>
+  
+  <section class="reveal">
+    <div class="card">
+      <h2><i class="fas fa-code"></i> Skills</h2><br>
+      <p>
+        <i class="fab fa-python"></i> pgl banana <br><br>
+        <i class="fab fa-html5"></i> shatir <br><br>
+        <i class="fab fa-css3-alt"></i>manshahari hu<br><br>
+        <i class="fab fa-js-square"></i> dimag khana  <br><br>
+        <i class="fas fa-video"></i>mature hu par body se
+      </p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="card">
+      <h2><i class="fas fa-address-book"></i> Contact me</h2> <br>
+      <p><i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/+zHhz9KzOPqcyNGFI" target="_blank"> isse baat kro phle  <i class="fas fa-link" style="font-size: 12px;"></i></a></p> <br> 
+     <!-- <p><i class="fab fa-whatsapp"></i> WhatsApp: </p> <br>--> 
+     
+      <hr style="width: 13em;"><br>
+     
+      <p><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/avika" target="_blank"> nhi hai bhiya  <i class="fas fa-link" style="font-size: 12px;"></i></a></p>
+    </div>
+  </section>
+
+  <button id="darkToggle"><i class="fas fa-moon"></i></button>
+  <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    const toggleBtn = document.getElementById('darkToggle');
+    const icon = toggleBtn.querySelector('i');
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.classList.toggle('active');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    });
+
+    const backToTop = document.getElementById('backToTop');
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const sections = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < trigger) sec.classList.add('active');
+      });
+
+      if (window.scrollY > 200) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+  
+  <hr><br>
+  <footer class="footer">
+  <p>Dᴇsɪɢɴᴇᴅ ʙʏ <a href="https://t.me/demix_ruri">Avika</a></p>
+  <!--<p>Oᴡɴᴇʀ ~ <span style="color: red;">Sᴛᴀʀᴋ</span></p>-->
+  <p> ©2025 • Avika • Aʟʟ Rɪɢʜᴛs Rᴇsᴇʀᴠᴇᴅ</p>
+</footer>
+<br>
+
+<!--vercel modules -->
+  <script>
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer="" src="/_vercel/speed-insights/script.js"></script>
+
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer="" src="/_vercel/insights/script.js"></script>
+  
+
+
+</body></html>
